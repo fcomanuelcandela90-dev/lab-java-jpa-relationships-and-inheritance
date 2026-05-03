@@ -1,0 +1,40 @@
+=========================================================
+PREGUNTAS BONUS: JPQL vs SQL Nativo
+=========================================================
+
+1. Nombra 3 tareas que se pueden hacer con SQL nativo pero que son difíciles o imposibles con JPQL:
+
+    A) Usar "superpoderes" exclusivos de una base de datos: JPQL es como un idioma universal diseñado para
+    funcionar en cualquier base de datos. Por eso, si quiero usar una función especial que solo existe
+    en MySQL (como agrupar textos con GROUP_CONCAT) o funciones espaciales/mapas, JPQL no sabe cómo hacerlo.
+    Para eso hay que usar SQL nativo.
+
+    B) Hacer cambios en la estructura de las tablas (DDL): Por lo que he visto, JPQL es genial para manejar
+    los datos de las entidades (SELECT, INSERT, UPDATE...), pero si en medio del código necesito vaciar
+    una tabla de golpe (TRUNCATE) o alterar su estructura (ALTER TABLE), JPQL no me deja. Se necesita SQL puro.
+
+    C) Consultas analíticas muy avanzadas: Aunque aún estoy aprendiendo, he leído que en SQL existen cosas
+    complejas como las "Window Functions" o "CTEs" (cláusulas WITH) para hacer estadísticas y análisis de
+    datos muy potentes. En JPQL estándar hacer esto es casi imposible porque está pensado para traer y llevar
+    objetos, no para hacer analítica pura.
+
+---------------------------------------------------------
+
+2. Explica por qué podrías preferir usar SQL nativo en lugar de JPQL en proyectos del mundo real:
+
+    Basado en lo que he aprendido en este laboratorio, aunque JPQL es súper cómodo porque me permite trabajar
+    directamente con mis clases de Java (sin preocuparme de las tablas), en una empresa real a veces hay que
+    bajar al barro y usar SQL por estas razones:
+
+    * Por rendimiento (Velocidad): A veces, cuando tenemos muchas relaciones (@OneToMany, @ManyToMany...),
+    Hibernate (nuestro traductor) intenta ayudar pero acaba generando consultas SQL gigantescas y lentas por detrás.
+    Escribir la consulta en SQL nativo a mano permite optimizarla al máximo para que vaya rápida como un rayo.
+
+    * Bases de datos heredadas ("Legacy"): Si entro a trabajar en un proyecto con una base de datos
+     de hace 15 años que está súper mal diseñada (tablas raras, sin Claves Primarias claras...),
+     intentar mapear eso a clases bonitas en Java con JPA puede ser un infierno.
+     En esos casos, es mucho más fácil hacer un SELECT normal en SQL y sacar solo los datos que necesito.
+
+    * Para no desperdiciar dinero: Si una empresa paga miles de euros por una base de datos muy potente (como Oracle),
+    lo hace para usar sus herramientas especiales. Como JPQL es un estándar que nivela todo por lo bajo,
+    usar SQL nativo es la única forma de exprimir al 100% las herramientas por las que la empresa está pagando.
