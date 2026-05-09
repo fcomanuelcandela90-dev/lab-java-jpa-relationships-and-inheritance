@@ -14,7 +14,6 @@ import java.util.List;
 public class Association {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "association_id", nullable = false, unique = true)
     private Long id;
 
     @Column(name = "association_name")

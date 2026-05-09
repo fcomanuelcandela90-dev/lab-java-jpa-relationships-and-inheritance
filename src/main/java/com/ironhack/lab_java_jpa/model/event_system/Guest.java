@@ -14,7 +14,6 @@ public class Guest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "guest_id", nullable = false, unique = true)
     private Long id;
 
     @Column(name = "guest_name", length = 100, nullable = false)

@@ -13,7 +13,6 @@ public class Speaker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "speaker_id", nullable = false, unique = true)
     private Long id;
 
     @Column(name = "speaker_name", nullable = false)

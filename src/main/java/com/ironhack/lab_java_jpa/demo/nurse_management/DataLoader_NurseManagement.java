@@ -49,6 +49,7 @@ public class DataLoader_NurseManagement implements CommandLineRunner {
             Division division = new Division();
             division.setName("AWS Medical Team");
             division.setDistrict(region);
+            division.setAssociation(amazonCare);
             division = divisionRepository.save(division);
 
             Member presidentNurse = new Member();

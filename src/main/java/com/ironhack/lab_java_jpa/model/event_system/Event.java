@@ -16,7 +16,6 @@ import java.util.List;
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "event_id", nullable = false, unique = true)
     private Long id;
 
     @Column(name = "event_title")
