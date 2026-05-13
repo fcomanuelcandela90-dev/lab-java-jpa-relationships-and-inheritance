@@ -1,0 +1,131 @@
+### ========================================================
+### Task Management System
+### ========================================================
+
+### --------------------------------------------------------
+### Task - GET ALL
+GET http://localhost:8080/api/tasks
+Accept: application/json
+
+### Task - GET BY ID
+GET http://localhost:8080/api/tasks/1
+Accept: application/json
+
+### Task - POST
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New Task",
+  "dueDate": "2026-12-01",
+  "completed": false
+}
+
+### Task - PUT
+PUT http://localhost:8080/api/tasks/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Updated Task",
+  "dueDate": "2027-01-15",
+  "completed": true
+}
+
+### Task - PATCH
+PATCH http://localhost:8080/api/tasks/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "completed": true
+}
+
+### Task - DELETE
+DELETE http://localhost:8080/api/tasks/1
+Accept: application/json
+
+### --------------------------------------------------------
+
+### BillableTask - GET ALL
+GET http://localhost:8080/api/tasks/billable
+Accept: application/json
+
+### BillableTask - GET BY ID
+GET http://localhost:8080/api/tasks/billable/1
+Accept: application/json
+
+### BillableTask - POST
+POST http://localhost:8080/api/tasks/billable
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New Billable Task",
+  "dueDate": "2026-12-15",
+  "completed": false,
+  "hourlyRate": 150.00
+}
+
+### BillableTask - PUT
+PUT http://localhost:8080/api/tasks/billable/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Updated Billable Task",
+  "dueDate": "2027-01-20",
+  "completed": true,
+  "hourlyRate": 200.00
+}
+
+### BillableTask - PATCH
+PATCH http://localhost:8080/api/tasks/billable/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "hourlyRate": 175.00
+}
+
+### --------------------------------------------------------
+
+### InternalTask - GET ALL
+GET http://localhost:8080/api/tasks/internal
+Accept: application/json
+
+### InternalTask - GET BY ID
+GET http://localhost:8080/api/tasks/internal/1
+Accept: application/json
+
+### InternalTask - POST
+POST http://localhost:8080/api/tasks/internal
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New Internal Task",
+  "dueDate": "2026-11-30",
+  "completed": false
+}
+
+### InternalTask - PUT
+PUT http://localhost:8080/api/tasks/internal/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Updated Internal Task",
+  "dueDate": "2027-02-01",
+  "completed": true
+}
+
+### InternalTask - PATCH
+PATCH http://localhost:8080/api/tasks/internal/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "completed": true
+}

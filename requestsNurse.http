@@ -1,0 +1,135 @@
+### ========================================================
+### Nurse Association Division Management
+### ========================================================
+
+### --------------------------------------------------------
+### Association - GET ALL
+GET http://localhost:8080/api/associations
+Accept: application/json
+
+### Association - GET BY ID
+GET http://localhost:8080/api/associations/1
+Accept: application/json
+
+### Association - POST
+POST http://localhost:8080/api/associations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New Association"
+}
+
+### Association - PUT
+PUT http://localhost:8080/api/associations/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Association Name"
+}
+
+### Association - PATCH
+PATCH http://localhost:8080/api/associations/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Patched Association"
+}
+
+### Association - DELETE
+DELETE http://localhost:8080/api/associations/1
+Accept: application/json
+
+### --------------------------------------------------------
+
+### Division - GET ALL
+GET http://localhost:8080/api/divisions
+Accept: application/json
+
+### Division - GET BY ID
+GET http://localhost:8080/api/divisions/1
+Accept: application/json
+
+### Division - GET BY DISTRICT
+GET http://localhost:8080/api/divisions/district/us-east-1%20%28N.%20Virginia%29
+Accept: application/json
+
+### Division - POST
+POST http://localhost:8080/api/divisions
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New Division",
+  "district": "us-west-2"
+}
+
+### Division - PUT
+PUT http://localhost:8080/api/divisions/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Division",
+  "district": "us-west-1"
+}
+
+### Division - PATCH
+PATCH http://localhost:8080/api/divisions/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "district": "eu-west-1"
+}
+
+### Division - DELETE
+DELETE http://localhost:8080/api/divisions/1
+Accept: application/json
+
+### --------------------------------------------------------
+
+### Member - GET ALL
+GET http://localhost:8080/api/members
+Accept: application/json
+
+### Member - GET BY ID
+GET http://localhost:8080/api/members/1
+Accept: application/json
+
+### Member - POST
+POST http://localhost:8080/api/members
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New Member",
+  "status": "ACTIVE",
+  "renewalDate": "2026-12-31"
+}
+
+### Member - PUT
+PUT http://localhost:8080/api/members/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Member",
+  "status": "LAPSED",
+  "renewalDate": "2027-01-01"
+}
+
+### Member - PATCH
+PATCH http://localhost:8080/api/members/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "ACTIVE"
+}
+
+### Member - DELETE
+DELETE http://localhost:8080/api/members/1
+Accept: application/json

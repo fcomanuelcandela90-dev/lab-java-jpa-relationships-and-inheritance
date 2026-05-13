@@ -1,6 +1,7 @@
 package com.ironhack.lab_java_jpa.model.nurse_management;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.ironhack.lab_java_jpa.enums.nurse_management.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -31,6 +32,7 @@ public class Member {
     private LocalDate renewalDate;
 
     @ManyToOne
+    @JsonIgnoreProperties({"president", "members"})
     @JoinColumn(name = "division_id")
     private Division division;
 }

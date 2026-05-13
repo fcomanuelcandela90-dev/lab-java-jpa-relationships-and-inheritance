@@ -1,0 +1,233 @@
+### ========================================================
+### Event Management System
+### ========================================================
+
+### --------------------------------------------------------
+### Event - GET ALL
+GET http://localhost:8080/api/events
+Accept: application/json
+
+### Event - GET BY ID
+GET http://localhost:8080/api/events/1
+Accept: application/json
+
+### Event - POST
+POST http://localhost:8080/api/events
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New Event",
+  "date": "2026-06-15",
+  "duration": 120,
+  "location": "Conference Room A"
+}
+
+### Event - PUT
+PUT http://localhost:8080/api/events/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Updated Event",
+  "date": "2026-07-01",
+  "duration": 180,
+  "location": "Main Hall"
+}
+
+### Event - PATCH
+PATCH http://localhost:8080/api/events/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "location": "Room 101"
+}
+
+### Event - DELETE
+DELETE http://localhost:8080/api/events/1
+Accept: application/json
+
+### --------------------------------------------------------
+
+### Conference - GET ALL
+GET http://localhost:8080/api/conferences
+Accept: application/json
+
+### Conference - GET BY ID
+GET http://localhost:8080/api/conferences/2
+Accept: application/json
+
+### Conference - POST
+POST http://localhost:8080/api/conferences
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New Conference",
+  "date": "2026-08-10",
+  "duration": 240,
+  "location": "Convention Center"
+}
+
+### Conference - PUT
+PUT http://localhost:8080/api/conferences/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Updated Conference",
+  "date": "2026-09-01",
+  "duration": 300,
+  "location": "Grand Ballroom"
+}
+
+### Conference - PATCH
+PATCH http://localhost:8080/api/conferences/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "location": "Auditorium B"
+}
+
+### Conference - DELETE
+DELETE http://localhost:8080/api/conferences/2
+Accept: application/json
+
+### --------------------------------------------------------
+
+### Exhibition - GET ALL
+GET http://localhost:8080/api/exhibitions
+Accept: application/json
+
+### Exhibition - GET BY ID
+GET http://localhost:8080/api/exhibitions/3
+Accept: application/json
+
+### Exhibition - POST
+POST http://localhost:8080/api/exhibitions
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New Exhibition",
+  "date": "2026-10-05",
+  "duration": 480,
+  "location": "Exhibition Hall"
+}
+
+### Exhibition - PUT
+PUT http://localhost:8080/api/exhibitions/3
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Updated Exhibition",
+  "date": "2026-11-15",
+  "duration": 720,
+  "location": "Expo Center"
+}
+
+### Exhibition - PATCH
+PATCH http://localhost:8080/api/exhibitions/3
+Content-Type: application/json
+Accept: application/json
+
+{
+  "location": "Main Pavilion"
+}
+
+### Exhibition - DELETE
+DELETE http://localhost:8080/api/exhibitions/3
+Accept: application/json
+
+### --------------------------------------------------------
+
+### Guest - GET ALL
+GET http://localhost:8080/api/guests
+Accept: application/json
+
+### Guest - GET BY ID
+GET http://localhost:8080/api/guests/1
+Accept: application/json
+
+### Guest - GET BY STATUS
+GET http://localhost:8080/api/guests/status/ATTENDING
+Accept: application/json
+
+### Guest - POST
+POST http://localhost:8080/api/guests
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New Guest",
+  "status": "NO_RESPONSE"
+}
+
+### Guest - PUT
+PUT http://localhost:8080/api/guests/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Guest",
+  "status": "ATTENDING"
+}
+
+### Guest - PATCH
+PATCH http://localhost:8080/api/guests/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "NOT_ATTENDING"
+}
+
+### Guest - DELETE
+DELETE http://localhost:8080/api/guests/1
+Accept: application/json
+
+### --------------------------------------------------------
+
+### Speaker - GET ALL
+GET http://localhost:8080/api/speakers
+Accept: application/json
+
+### Speaker - GET BY ID
+GET http://localhost:8080/api/speakers/1
+Accept: application/json
+
+### Speaker - POST
+POST http://localhost:8080/api/speakers
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New Speaker",
+  "presentationDuration": 60
+}
+
+### Speaker - PUT
+PUT http://localhost:8080/api/speakers/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Speaker",
+  "presentationDuration": 90
+}
+
+### Speaker - PATCH
+PATCH http://localhost:8080/api/speakers/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "presentationDuration": 45
+}
+
+### Speaker - DELETE
+DELETE http://localhost:8080/api/speakers/1
+Accept: application/json

@@ -1,0 +1,64 @@
+### ========================================================
+### Public Relations Contact System
+### ========================================================
+
+### Contact - GET ALL
+GET http://localhost:8080/api/contacts
+Accept: application/json
+
+### Contact - GET BY ID
+GET http://localhost:8080/api/contacts/1
+Accept: application/json
+
+### Contact - GET BY COMPANY
+GET http://localhost:8080/api/contacts/company/Ironhack
+Accept: application/json
+
+### Contact - GET BY TITLE
+GET http://localhost:8080/api/contacts/title/Manager
+Accept: application/json
+
+### Contact - POST
+POST http://localhost:8080/api/contacts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "company": "New Company",
+  "title": "Director",
+  "name": {
+    "salutation": "Mr.",
+    "firstName": "John",
+    "middleName": "A.",
+    "lastName": "Doe"
+  }
+}
+
+### Contact - PUT
+PUT http://localhost:8080/api/contacts/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "company": "Updated Company",
+  "title": "Senior Director",
+  "name": {
+    "salutation": "Mr.",
+    "firstName": "John",
+    "middleName": "B.",
+    "lastName": "Updated"
+  }
+}
+
+### Contact - PATCH
+PATCH http://localhost:8080/api/contacts/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Chief Manager"
+}
+
+### Contact - DELETE
+DELETE http://localhost:8080/api/contacts/1
+Accept: application/json
